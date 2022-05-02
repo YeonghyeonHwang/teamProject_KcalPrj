@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="letter">
+	<select id="selectLetterCount" resultType="int">
+		select count(*)
+		from letter
+		where
+		<choose>
+			<when test="rnick != null">
+				rnick = #{rnick}
+			</when>
+			<when test="snick != null">
+				snick = #{snick}
+			</when>
+		</choose>
+	</select>	
+	
+	<select id="selectLetterList" parameterType="letterVO" resultType="letterVO">
+		select lnum, rnick, snick, title, content, DATE_FORMAT(datetime, '%Y-%m-%d') as date, ischeck
+		from letter
+		where
+		<choose>
+			<when test="rnick != null">
+				rnick = #{rnick}
+			</when>
+			<when test="snick != null">
+				snick = #{snick}
+			</when>
+		</choose>
+		order by datetime desc
+		<choose>
+			<when test="rnick != null">
+				limit #{rstart},
+			</when>
+			<when test="snick != null">
+				limit #{sstart},
+			</when>
+		</choose>
+		#{count}
+	</select>
+	
+	<select id="selectLetter" parameterType="letterVO" resultType="letterVO">
+		select lnum, rnick, snick, title, content, DATE_FORMAT(datetime, '%Y-%m-%d') as date, ischeck
+		from letter
+		where lnum = #{lnum}
+	</select>
+	
+	<insert id="insertLetter" parameterType="letterVO">
+		insert into letter(rnick, snick, title, content)
+		values(#{rnick}, #{snick}, #{title}, #{content})
+	</insert>
+	
+	<update id="updateLetter" parameterType="letterVO">
+		update letter set ischeck = 'Y' where lnum = #{lnum}
+	</update>
+	
+	<delete id="deleteLetter" parameterType="letterVO">
+		delete from letter
+		where lnum = ${lnum}
+		<!-- <choose>
+			<when test="rnick != null">
+				and rnick = #{rnick}
+			</when>
+			<when test="snick != null">
+				and snick = #{snick}
+			</when>
+		</choose> -->
+	</delete>
+</mapper>

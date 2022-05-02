@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+.csBox {
+    width: 80%;
+    height: 1500px;
+    margin: 0 auto;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.csImg {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.csImg > img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+}
+
+.csImgMent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 120px;
+    font-weight: bold;
+    font-family: 'Dongle', sans-serif;
+    width: 100%;
+    text-align: center;
+}
+
+.csTitle {
+    background-color: #53026F;
+    height: 55px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.csTitle > button {
+    border: none;
+    background: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.csTitle > button:hover {
+    color: yellow;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.csTitle button.active {
+    color: yellow;
+}
+
+.csContent {
+    display: none;
+}
+
+
+/* faq css */
+
+.layout{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.faq > li{
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.faq > li:nth-child(n+2){ /* 아이템 구분 점선 */
+  border-top: 1px dashed #aaa;
+}
+.faq input {
+  display: none;
+}
+
+.faq label { /* 제목 - 클릭 영역 */
+  font-weight: bold;
+  color: #000;
+  margin: 20px 0 0;
+  cursor: pointer;
+}
+.faq label::before { /* 제목 앞 화살표 */
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-left: 8px solid #a00;
+  margin: 2px 0 0 8px;
+  float: left;
+}
+.faq input:checked + label::before { /* 내용 펼침 상태 제목 앞 화살표 */
+  border: 8px solid transparent;
+  border-top: 8px solid #a00;
+  border-bottom: 0;
+  margin: 8px 4px 0;
+}
+
+.faq div { /* 내용 영역 - 기본 감춤 상태 */
+  display: none;
+  color: #666;
+  font-size: 0.9375em;
+  overflow: hidden;
+  padding: 10px 0 10px 30px;
+  box-sizing: border-box;
+  transition: max-height 0.4s;
+}
+.faq input:checked + label + div { /* 내용 영역 펼침 */
+  display: block;
+}
+
+
+.faq label::before { /* 제목 앞 화살표 */
+  content: "▶";
+  display: block;
+  color: #a00;
+  margin-right: 8px;
+  float: left;
+}
+.faq input:checked + label::before { /* 내용 펼침 상태 제목 앞 화살표 */
+  content: "▼";
+}
+
+/* ================================================================= */
+
+.oneToOne {
+	width: 80%;
+	height: 850px;
+	margin: 0 auto;
+	margin-top: 100px;
+	border: 2px solid #ccc;
+	border-radius: 10px;
+	margin-bottom: 50px;
+}
+
+#goQuestion {
+	width: 850px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+#goQuestion > ul {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 100px;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	flex-direction: column;
+	
+}
+
+#goQuestion > ul > li {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 30px;
+	color: dimgray;
+}
+
+#goQuestion > ul > li:nth-child(1) {
+	height: 50px;
+	font-size: 25px;
+	font-weight: bold;
+	border-bottom: 3px solid orangered;
+	margin-bottom: 100px;
+}
+
+#goQuestion > ul > li:nth-child(2) > label {
+	font-size: 17px;
+	margin-right: 67px;
+}
+
+#goQuestion > ul > li:nth-child(2) > input {
+	width: 180px;
+	border-radius: 5px;
+	border: 2px solid #ccc;
+}
+
+
+#goQuestion > ul > li:nth-child(3) > label {
+	font-size: 17px;
+	margin-right: 84px;
+}
+
+#goQuestion > ul > li:nth-child(3) > input {
+	width: 600px;
+	border-radius: 5px;
+	border: 2px solid #ccc;
+}
+
+#goQuestion > ul > li:nth-child(4) {
+	position: relative;
+	height: 340px;
+}
+
+#goQuestion > ul > li:nth-child(4) > label {
+	position: absolute;
+	font-size: 17px;
+	top: 0;
+	left: 0;
+}
+
+#goQuestion > ul > li:nth-child(4) > textarea {
+	position: absolute;
+	top: 0;
+	left: 118px;
+	border-radius: 5px;
+	border: 2px solid #ccc;
+	resize: none;
+	width: 600px;
+	height: 300px;
+	padding:5px;
+}
+
+#goQuestion > ul > li:nth-child(5) {
+	display: flex;
+	justify-content: center;
+}
+
+#goQuestion > ul > li:nth-child(5) > div > button {
+	width: 100px;
+    height: 40px;
+    color: lightslategray;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+#goQuestion > ul > li:nth-child(5) > div > button:hover {
+	background-color: #ff8d64;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#goQuestion > ul > li:nth-child(5) > div > p > a {
+	color: red;
+}
+
+textarea:focus {
+	transition: .5s;
+	outline: 2px solid orangered;
+}
+
+
+input:focus {
+	transition: .5s;
+	outline: 2px solid orangered;
+}
+
+input {
+	height: 30px;
+	padding-left: 7px;
+}

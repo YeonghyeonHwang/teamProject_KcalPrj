@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #fff;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {list-style-type: none;}
+
+.noticeBox {
+    width: 80%;
+    height: 1500px;
+    margin: 0 auto;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.noticeImg {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.noticeImg > img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+}
+
+.noticeImgMent {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 120px;
+    font-weight: bold;
+    font-family: 'Dongle', sans-serif;
+}
+
+.noticeTitle {
+    background-color: #6F1602;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: yellow;
+    letter-spacing: 2px;
+}
+
+.noticeContent {
+	padding: 30px 15px;
+}
+
+#notice {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+#notice th {
+	padding: 10px 0;
+	border-top: 2px solid orangered;
+	border-bottom: 2px solid orangered;
+}
+#notice td {
+	text-align: center;
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+#notice tr th:nth-child(1) {
+	width: 70px;
+}
+#notice tr td:nth-child(2) {
+	text-align: left;
+}
+#notice tr td:nth-child(2):hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+#notice tr th:nth-child(3),
+#notice tr th:nth-child(4) {
+	width: 130px;
+}
+#pageBox {
+	display: flex;
+	width: 250px;
+	justify-content: space-between;
+	margin: 20px auto 0;
+}
+.PageNum,
+.PreBlock,
+.PrePage,
+.NextBlock,
+.NextPage {
+	cursor: pointer;
+	display: inline-block;
+}
+
+#create {
+	margin: 20px 20px 0;
+	display: inline-block;
+	width: 100px;
+	height: 35px;
+	border-radius: 17.5px;
+	background-color: orangered;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+}

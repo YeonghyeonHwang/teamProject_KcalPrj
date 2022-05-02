@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="reply">
+  
+ 	<select id="selectReplyList" parameterType="replyVO" resultType="replyVO">
+ 		select rnum, bnum, unum, id, nickname, content, DATE_FORMAT(createdate, '%Y-%m-%d   %H:%i') as createdate, isdelete
+ 		from bbsreply
+ 		where bnum = #{bnum}
+ 		and isdelete = 'N'
+ 	</select>
+ 	
+ 	<insert id="insertReply" parameterType="replyVO"
+ 	useGeneratedKeys="true" keyProperty="rnum">
+ 		insert into bbsreply(bnum, unum, id, nickname, content)
+ 		values(#{bnum}, #{unum}, #{id}, #{nickname}, #{content})
+ 	</insert>
+ 	
+ 	<update id="updateReply" parameterType="replyVO">
+ 		update bbsreply set content = #{content}
+ 		where rnum = #{rnum}
+ 		and unum = #{unum}
+ 	</update>
+ 	
+ 	<delete id="deleteReply" parameterType="replyVO">
+ 		update bbsreply set isdelete = 'Y'
+ 		where rnum = #{rnum}
+ 		and unum = #{unum} 	
+ 	</delete>
+ </mapper>

@@ -1,0 +1,321 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #fff;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {list-style-type: none;}
+
+
+.kcalBox {
+    width: 80%;
+    height: 1500px;
+    margin: 0 auto;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.kcalImg {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.kcalImg > img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+}
+
+.kcalImgMent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 120px;
+    font-weight: bold;
+    font-family: 'Dongle', sans-serif;
+}
+
+.kcalTitle {
+    background-color: #E27451;
+    height: 55px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: yellow;
+    font-weight: bold;
+}
+
+
+#calcResult {
+	width: 100%;
+	padding: 40px;
+	text-align: center;
+	border-right: 2px solid #ccc;
+	border-bottom: 2px solid #ccc;
+	border-left: 2px solid #ccc;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#calcResultMent {
+	height: 70px;
+	line-height: 70px;
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: black;
+}
+
+#calcResultMent > span {
+	color: red;
+}
+
+#calcResult #saveBox {
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+#calcResult > p:nth-child(2) {
+	color: black;
+	font-size: 0.8rem;
+	text-align: center;
+	margin-top: 15px;
+}
+#calcResult > p:nth-child(2) a {
+	text-decoration: underline;
+	color: orangered;
+}
+#calcResult > p:nth-child(2) a:hover {
+	font-weight: bold;
+}
+
+#datepicker,
+#timepicker {
+	width: 100px;
+	text-align: center;
+	margin-right: 10px;
+	border: none;
+	border-radius: 10px;
+	background-color: #eee;
+	color: lightslategray;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#timepicker:hover {
+	background-color: #ff8d64;
+    color: white;
+    transition: 0.25s;
+}
+
+#datepicker::placeholder {
+	color: lightslategray;
+}
+
+#datepicker:hover {
+	background-color: #ff8d64;
+    transition: 0.25s;
+}
+
+#datepicker:hover::placeholder {
+	color: white;
+}
+
+#saveBox > input:focus {
+	outline: none;
+}
+
+#saveBtn {
+	cursor: pointer;
+	/* width: 130px; */
+	padding: 0 10px;
+	height: 40px;
+	font-size: 12px;
+	background-color: #eee;
+	border: none;
+	color: lightslategray;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+#saveBtn:hover {
+	background-color: #ff8d64;
+    color: white;
+    transition: 0.25s;
+}
+
+
+#searchBox {
+	display: flex;
+	margin-bottom: 20px;
+}
+#inputFood {
+	flex-grow: 1;
+	padding-left: 15px;
+	height: 40px;
+	border-radius: 10px 0 0 10px;
+	border: 2px solid #E27451;
+}
+#inputFood:focus {
+	outline: none;
+}
+#searchFood {
+	background-color: #E27451;
+	border: none;
+	color: #fff;
+	padding: 0 30px;
+	border-radius: 0 10px 10px 0;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+#food {
+	max-height: 500px;
+	overflow: auto;
+	width: 100%;
+	/* table-layout: fixed; */
+	padding: 10px 20px;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+#food tr, 
+#food th, 
+#food td {width: 100%;}
+#food::-webkit-scrollbar {
+    width: 10px;
+}
+#food::-webkit-scrollbar-thumb {
+	background-color: #ec7d62;
+    border-radius: 5px;
+}
+#food::-webkit-scrollbar-track {
+    background-color: #eee;
+    border-radius: 5px;
+}
+#food th {
+	background-color: #faddd6;
+	padding: 10px;
+	font-weight: bold;
+}
+#food td {
+	padding: 0 10px;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #ccc;
+}
+#food tr td:nth-child(2),
+#food tr td:nth-child(3) {
+	width: 100px;
+	min-width: 100px;
+	text-align: center;
+}
+
+#food .intake {
+	width: 100px;
+	height: 25px;
+	border: 1px solid #d4d4d4;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+#food .putBtn {
+	border: none;
+	width: 60px;
+	height: 25px;
+	background-color: #d4d4d4;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#myMeal {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 50px 0;
+	padding: 15px;
+	border-radius: 20px;
+	border: 2px solid #ccc;
+	min-height: 150px;
+}
+#myMeal #myMealTitle {
+	padding-bottom: 15px;
+	text-align: center;
+	color: #E27451;
+	font-weight: bold;
+	border-bottom: 2px solid #ccc;
+	margin-bottom: 15px;
+	
+}
+#myMealMent {
+	text-align: center;
+	padding: 30px 0;
+	line-height: 1.5;
+}
+
+#menuList {
+	/* border-collapse: separate;
+	border-spacing: 10px; */
+	width: 90%;
+	margin: 0 auto;
+}
+#menuList td {
+	padding: 10px 5px;
+}
+
+#menuList tr td:nth-child(2) {
+	width: 60px;
+	text-align: center;
+}
+#menuList tr td:nth-child(3) {
+	width: 100px;
+	text-align: center;
+}
+#menuList tr td:nth-child(4) {
+	width: 30px;
+	text-align: center;
+}
+
+#menuList .remove {
+	cursor: pointer;
+}
+
+#myMeal #btns {
+	text-align: center;
+	margin-top: 15px;
+}
+
+#reset,
+#calcBtn {
+	cursor: pointer;
+	padding: 0 10px;
+	height: 30px;
+	font-size: 1rem;
+	background-color: #E27451;
+	border: none;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+
+
+

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="bbs">
+	<select id="selectBBSCount" parameterType="bbsVO" resultType="int">
+		select count(*)
+		from bbs
+		where isdelete = 'N'
+			<if test="category != null">
+				and category = #{category}
+			</if>
+			<if test="unum != 0">
+				and unum = #{unum}
+			</if>
+			<if test="id != null">
+				and id = #{id}
+			</if>
+			<if test="nickname != null">
+				and nickname = #{nickname}
+			</if>
+			<if test="isreport != null">
+				and isreport = #{isreport}
+			</if>
+			<if test="isopen != null">
+				and isopen = #{isopen}
+			</if>
+			<if test="title != null and content != null">
+				and (title like #{title} or content like #{content})
+			</if>
+			<if test="title == null and content != null">
+				and content like #{content}
+			</if>
+			<if test="title != null and content == null">
+				and title like #{title}
+			</if>
+			<if test="region != null">
+				or region like #{region}
+			</if>
+	</select>	
+	
+	<select id="selectBBSList" parameterType="bbsVO" resultType="bbsVO">
+		select b.bnum, b.category, b.region, b.unum, b.id, b.nickname, DATE_FORMAT(b.create_date, '%Y-%m-%d') as createdate, b.title, b.content,
+			   b.view_cnt, b.recommend, b.isdelete, b.isreport, b.isopen, COUNT(r.rnum) AS replyCnt
+		from bbs b
+		left join bbsreply r
+		on b.bnum = r.bnum
+		where b.isdelete = 'N'
+			<if test="category != null">
+				and b.category = #{category}
+			</if>
+			<if test="unum != 0">
+				and b.unum = #{unum}
+			</if>
+			<if test="id != null">
+				and b.id = #{id}
+			</if>
+			<if test="nickname != null">
+				and b.nickname = #{nickname}
+			</if>
+			<if test="isreport != null">
+				and b.isreport = #{isreport}
+			</if>
+			<if test="isopen != null">
+				and b.isopen = #{isopen}
+			</if>
+			<if test="title != null and content != null">
+				and (b.title like #{title} or b.content like #{content})
+			</if>
+			<if test="title == null and content != null">
+				and b.content like #{content}
+			</if>
+			<if test="title != null and content == null">
+				and b.title like #{title}
+			</if>
+			<if test="region != null">
+				or b.region like #{region}
+			</if>
+		group by b.bnum
+		order by b.create_date desc
+		limit #{start}, #{count}
+	</select>
+	
+	<select id="selectBBS" parameterType="bbsVO" resultType="bbsVO">
+		select b.bnum, b.category, b.region, b.unum, b.id, b.nickname, DATE_FORMAT(b.create_date, '%Y-%m-%d') as createdate, b.title, b.content,
+			   b.view_cnt, b.recommend, b.isdelete, b.isreport, b.isopen, COUNT(r.rnum) AS replyCnt
+		from bbs b
+		left join bbsreply r
+		on b.bnum = r.bnum
+		where b.isdelete = 'N'
+		and b.bnum = #{bnum}
+		AND r.isdelete = 'N'
+	</select>
+	
+	<insert id="insertBBS" parameterType="bbsVO"
+	useGeneratedKeys="true" keyProperty="bnum">
+		insert into bbs(category, unum, id, nickname, title, content
+		<if test="region != null">, region</if>
+		)
+		values(#{category}, #{unum}, #{id}, #{nickname}, #{title}, #{content}
+		<if test="region != null">, #{region}</if>
+		)
+	</insert>
+	
+	<update id="updateBBS" parameterType="bbsVO">
+		update bbs
+		<set>
+			<if test="title != null">, title = #{title}</if>
+			<if test="content != null">, content = #{content}</if>
+			<if test="region != null">, region = #{region}</if>
+		</set>
+		where bnum=#{bnum}
+	</update>
+	<update id="updateViewCnt" parameterType="bbsVO">
+		update bbs set view_cnt = view_cnt+1 where bnum = #{bnum}
+	</update>
+	<update id="updateRecommend" parameterType="int">
+		update bbs set recommend = recommend+1 where bnum = #{bnum}
+	</update>
+	
+	<delete id="deleteBBS" parameterType="bbsVO">
+		update bbs set isdelete='Y' 
+		where bnum=#{bnum} and unum=#{unum}
+	</delete>
+	
+</mapper>

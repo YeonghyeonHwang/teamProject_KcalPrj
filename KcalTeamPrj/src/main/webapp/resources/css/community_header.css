@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #fff;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {list-style-type: none;}
+
+header {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1260px;
+	padding: 0 30px;
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
+	position: relative;
+}
+header #logo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+header #logo img {
+	width: 85px;
+}
+header #logo span {
+	display: inline-block;
+    margin-left: 10px;
+    color: orangered;
+    width: 170px;
+    min-width: 170px;
+    font-size: 50px;
+    font-family: 'Dongle', sans-serif;
+}
+header #header_r {
+	display: flex;
+	align-items: center;
+}
+header #menu {
+	display: flex;
+	justify-content: space-between;
+	color: #708090;
+	align-items: center;
+	width: 650px;
+	min-width: 650px;
+	margin: 0 20px;
+}
+header #menu li {
+	cursor: pointer;
+}
+header #menu li:hover {
+	color:orangered;
+    transform: scale(1.1);
+    transition: .7s;
+}
+
+header input {
+	width: 200px;
+	height: 30px;
+	padding-left: 15px;
+	border-radius: 15px;
+	border: 2px solid #ccc;
+}
+
+header #searchAllBtn {
+	display: inline-block;
+	width: 30px;
+	min-width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	margin-left: 5px;
+	border: none;
+	background-color: orangered;
+	color: #fff;
+	cursor: pointer;
+}
+
+header .user {
+	margin-left: 10px;
+	border: 2px solid #ccc;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	cursor: pointer;
+	overflow: hidden;
+	
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+header #user-logout {
+	color: #ccc;
+}
+header #user-login {
+	color: orangered;
+	border: 2px solid orangered;
+}
+
+header .userBox {
+	background-color: #fff;
+	border: 2px solid #ccc;
+	width: 200px;
+	position: absolute;
+	right: 30px;
+	top: 80px;
+	text-align: center;
+	padding: 20px;
+	border-radius: 10px;
+	z-index: 5;
+}
+header .ubLogin {
+	display: none;
+}
+header .ubLogin.clicked {
+	display: inline-block;
+}
+.ubLogin #ubLoginClose {
+	position: absolute;
+	top: 10px;
+	right: 13px;
+	color: #bbb;
+	cursor: pointer;
+	font-size: 1.2rem;
+}
+
+header .ubLogin #userImg {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	
+}
+#userImg img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.ubLogin #ubnickname {
+	font-size: 1.1rem;
+}
+.ubLogin #letterBox {
+	color: #bbb;
+	cursor: pointer;
+	padding-left: 5px;
+	font-size: 1.2rem;
+}
+.ubLogin #letterBox:hover {
+	color: orangered;
+}
+
+header .ubLogout {
+	display: none;
+}
+header .ubLogout.clicked {
+	display: inline-block;
+}
+.ubLogout #ubLogoutClose {
+	position: absolute;
+	top: 10px;
+	right: 13px;
+	color: #bbb;
+	cursor: pointer;
+	font-size: 1.2rem;
+}
+header .ubLogout p {
+	font-size: 0.8rem;
+	text-align: center;
+	padding: 5px 0;
+}
+
+.ubBtn {
+	width: 100%;
+	background-color: #eee;
+	margin-top: 10px;
+	padding: 5px 0;
+	cursor: pointer;
+	font-size: 0.9rem;
+}

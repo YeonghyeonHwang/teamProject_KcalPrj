@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0/EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+  
+<configuration>
+	<typeAliases>
+		<typeAlias type="vo.MemberVO" alias="mvo"/>
+		<typeAlias type="vo.LetterVO" alias="letterVO"/>
+		<typeAlias type="vo.BBSVO" alias="bbsVO"/>
+		<typeAlias type="vo.TipVO" alias="tvo"/>
+		<typeAlias type="vo.MealVO" alias="mealVO"/>
+		<typeAlias type="vo.MealcardVO" alias="mCardVO"/>
+		<typeAlias type="vo.MealinfoVO" alias="mInfoVO"/>
+		<typeAlias type="vo.FollowVO" alias="followVO"/> 
+		<typeAlias type="vo.UserpostVO" alias="userpostVO"/>
+		<typeAlias type="vo.PostfileVO" alias="postfileVO"/>		
+		<typeAlias type="vo.BBSReplyVO" alias="replyVO"/>		
+		<typeAlias type="vo.RandomMemberVO" alias="rmVO"/>		
+		<typeAlias type="vo.CsqnaVO" alias="csqnaVO"/>
+	</typeAliases>
+</configuration>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  
+<mapper namespace="member">
+	<select id="selectMemberCount" parameterType="mvo" resultType="int">
+		select count(*) from member
+		<where>
+			<if test="id != null">
+				and id like #{id}
+			</if>
+			<if test="password != null">
+				and password like #{password}
+			</if>
+			<if test="email != null">
+				and email like #{email}
+			</if>
+			<if test="nickname != null">
+				and nickname like #{nickname}
+			</if>
+			<if test="addr1 != null">
+				and addr1 = #{addr1}
+			</if>
+			<if test="addr2 != null">
+				and addr2 like #{addr2}
+			</if>
+			<if test="addr3 != null">
+				and addr3 like #{addr3}
+			</if>
+			<if test="comment != null">
+				and comment like #{comment}
+			</if>
+			<if test="p_isopen != null">
+				and p_isopen like #{p_isopen}
+			</if>
+			<if test="d_isopen != null">
+				and d_isopen like #{d_isopen}
+			</if>
+			<if test="i_isopen != null">
+				and i_isopen like #{i_isopen}
+			</if>
+			<if test="e_isopen != null">
+				and e_isopen like #{e_isopen}
+			</if>
+			<if test="isdelete != null">
+				and isdelete like #{isdelete}
+			</if>
+			<if test="isadmin != null">
+				and isadmin like #{isadmin}
+			</if>
+			<if test="img_localname != null">
+				and img_localname like #{img_localname}
+			</if>
+			<if test="img_servername != null">
+				and img_servername like #{img_servername}
+			</if>
+		</where>
+	</select>
+	
+	<select id="selectMemberOne" parameterType="mvo" resultType="mvo">
+		select unum, id, password, email, nickname, addr1, addr2, addr3, comment,
+			   p_isopen, d_isopen, i_isopen, e_isopen, isdelete, isadmin, img_localname, img_servername
+		from member
+		where id = #{id}
+		<if test="email != null">
+			and email = #{email}
+		</if>
+		<if test="password != null">
+			and password = #{password}
+		</if>
+
+	</select>
+	
+	<select id="selectMemberList" parameterType="mvo" resultType="mvo">
+		select unum, id, password, email, nickname, addr1, addr2, addr3, comment,
+			   p_isopen, d_isopen, i_isopen, e_isopen, isdelete, isadmin, img_localname, img_servername
+		from member
+		<where>
+			<if test="unum != 0">
+				and unum like #{unum}
+			</if>
+			<if test="id != null">
+				and id like #{id}
+			</if>
+			<if test="password != null">
+				and password like #{password}
+			</if>
+			<if test="email != null">
+				and email like #{email}
+			</if>
+			<if test="nickname != null">
+				and nickname like #{nickname}
+			</if>
+			<if test="addr1 != null">
+				and addr1 = #{addr1}
+			</if>
+			<if test="addr2 != null">
+				and addr2 like #{addr2}
+			</if>
+			<if test="addr3 != null">
+				and addr3 like #{addr3}
+			</if>
+			<if test="comment != null">
+				and comment like #{comment}
+			</if>
+			<if test="p_isopen != null">
+				and p_isopen like #{p_isopen}
+			</if>
+			<if test="d_isopen != null">
+				and d_isopen like #{d_isopen}
+			</if>
+			<if test="i_isopen != null">
+				and i_isopen like #{i_isopen}
+			</if>
+			<if test="e_isopen != null">
+				and e_isopen like #{e_isopen}
+			</if>
+			<if test="isdelete != null">
+				and isdelete like #{isdelete}
+			</if>
+			<if test="isadmin != null">
+				and isadmin like #{isadmin}
+			</if>
+			<if test="img_localname != null">
+				and img_localname like #{img_localname}
+			</if>
+			<if test="img_servername != null">
+				and img_servername like #{img_servername}
+			</if>
+		</where>
+	</select>
+	
+	<insert id="insertMember" parameterType="mvo">
+		insert into member(id, password, email, nickname, addr1, addr2, addr3) 
+		values(#{id}, #{password}, #{email}, #{nickname}, #{addr1}, #{addr2}, #{addr3})
+	</insert>
+	
+	<update id="updateMember" parameterType="mvo">
+		update member
+		<set>
+			<if test="id != null">
+				,id = #{id}
+			</if>
+			<if test="password != null">
+				,password = #{password}
+			</if>
+			<if test="email != null">
+				,email = #{email}
+			</if>
+			<if test="nickname != null">
+				,nickname = #{nickname}
+			</if>
+			<if test="addr1 != null">
+				,addr1 = #{addr1}
+			</if>
+			<if test="addr2 != null">
+				,addr2 = #{addr2}
+			</if>
+			<if test="addr3 != null">
+				,addr3 = #{addr3}
+			</if>
+			<if test="comment != null">
+				,comment = #{comment}
+			</if>
+			<if test="p_isopen != null">
+				,p_isopen = #{p_isopen}
+			</if>
+			<if test="d_isopen != null">
+				,d_isopen = #{d_isopen}
+			</if>
+			<if test="i_isopen != null">
+				,i_isopen = #{i_isopen}
+			</if>
+			<if test="e_isopen != null">
+				,e_isopen = #{e_isopen}
+			</if>
+			<if test="isdelete != null">
+				,isdelete = #{isdelete}
+			</if>
+			<if test="isadmin != null">
+				,isadmin = #{isadmin}
+			</if>
+			<if test="img_localname != null">
+				,img_localname = #{img_localname}
+			</if>
+			<if test="img_servername != null">
+				,img_servername = #{img_servername}
+			</if>
+		</set>
+		where unum = #{unum}
+	</update>
+	
+	<delete id="deleteMember" parameterType="mvo">
+		delete from member where unum = #{unum}
+	</delete>
+	
+	
+	<!-- profile -->
+	<select id="selectMember" parameterType="mvo" resultType="mvo">
+		select *
+		from member
+		where nickname=#{nickname}
+		<!-- where id = #{id}
+		and password = #{password} -->
+	</select>
+	
+	<update id="updateProfile" parameterType="mvo">
+	     update member set
+	     comment=#{comment},
+	     p_isopen=#{p_isopen},
+	     d_isopen=#{d_isopen},
+	     i_isopen=#{i_isopen},
+	     e_isopen=#{e_isopen}
+	     where nickname=#{nickname}
+	
+	</update>
+	<update id="updateProfileImg" parameterType="mvo">
+	     update member set 
+	     img_localname=#{img_localname},
+	     img_servername=#{img_servername}
+	     where nickname=#{nickname}
+	
+	</update>
+	
+	
+	<!-- randomSelect -->
+	<select id="selectRandomMember" resultType="rmVO">
+		select nickname, img_servername
+		from member
+		order by rand() limit 6
+	</select>
+	
+	 <!-- 아이디 찾기 -->
+	<select id="findId" parameterType="String" resultType="String">
+		select id from member where email = #{email}
+	</select>
+</mapper>

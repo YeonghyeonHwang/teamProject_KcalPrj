@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+.tipBox {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.tipImg {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.tipImg > img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+}
+
+.tipImg > ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.tipImg > ul > li:nth-child(1) {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 120px;
+    font-weight: bold;
+    font-family: 'Dongle', sans-serif;
+}
+
+.tipTitle {
+    background-color: #026F6C;
+    height: 55px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.tipDetailBox {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.tipDetailBox > ul > li {
+    border-bottom: 2px solid orangered;
+}
+
+.tipDetailBox > ul > li:nth-child(1) { 
+    display: flex;
+    justify-content: space-between;
+}
+
+.tipDetailBox > ul > li:nth-child(1) > p {
+    font-family: 'Dongle', sans-serif;
+    font-size: 65px;
+    color: orangered;
+}
+
+.tipDetailBox > ul > li:nth-child(1) > div { 
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5px;
+}
+
+.tipDetailBox > ul > li:nth-child(1) > div > button { 
+    width: 60px;
+    height: 30px;
+    font-size: 13px;
+    background-color: #eee;
+    color: lightslategray;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tipDetailBox > ul > li:nth-child(1) > div > button:hover { 
+    background-color: #ff8d64;
+    color: white;
+    transition: 0.25s;
+}
+
+.tipDetailBox > ul > li:nth-child(1) > div > button:nth-child(1) { 
+    margin-right: 10px;
+}
+
+.tipDetailBox > ul > li:nth-child(1) > div > button:nth-child(2) { 
+    margin-right: 10px;
+}
+
+.tipDetailBox > ul > li:nth-child(2) > div:nth-child(1) {
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.nickBox > ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.nickBox > ul > li {
+    display: flex;
+}
+
+.nickBox > ul > li:nth-child(1) > p:nth-child(1) {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.nickBox > ul > li:nth-child(2) > p:nth-child(1) {
+    margin-right: 20px;
+}
+
+.tipDetailBox > ul > li:nth-child(3) {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    border-bottom: 2px solid orangered;
+    margin-bottom: 150px;
+    padding: 0 80px;
+    line-height: 1.3;
+    min-height: 250px;
+}
+
+.tipDetailBox > ul > li:nth-child(3) > p {
+	width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom:50px;
+    word-wrap: break-word;
+}
+

@@ -1,0 +1,626 @@
+@charset "UTF-8";
+
+.container {
+   font-family: 'Noto Sans', sans-serif;
+   background-color: #EFF1F6;
+}
+
+/* main 이미지*/
+.main {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.mainImgBox {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.imgSlide {
+    opacity: 0;
+    animation: slide 1s linear;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.mainImg {
+    width: 100%;
+    height: 673px;
+    overflow: hidden;
+}
+
+.mainImg > img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+}
+
+.mainMent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.mainMent > p:first-child {
+    font-family: 'Dongle', sans-serif;
+    height: 60px;
+    font-size: 70px;
+    border-bottom: 2px solid white;
+    text-align: center;
+}
+
+.mainMent > p:last-child {
+    margin-top: 20px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mainMent > p:last-child > span {
+    font-family: 'Dongle', sans-serif;
+    font-size: 35px;
+}
+
+/* 메인contents */
+.mainContentBox {
+    width: 75%;
+    height: 3400px;
+    margin: 0 auto;
+    background-color: white;
+    position: relative;
+}
+
+.contentsBga {
+    width: 100%;
+    height: 700px;
+    background-color: #026F6C;
+}
+
+.contentsBgb {
+    width: 100%;
+    height: 700px;
+    background-color: #E27451;
+    margin-top: 700px;
+}
+
+.subMent {
+    position: absolute;
+    top: 100px;
+    left: 120px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subMent > p > span {
+    font-family: 'Dancing Script', cursive;
+    font-size: 23px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.subMent > p:nth-child(1) {
+    margin-bottom: 50px;
+}
+
+.subMent > p:nth-child(2) {
+    width: 320px;
+    font-size: 17px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    z-index: 2;
+    line-height: 1.5;
+}
+
+.mark {
+    position: relative;
+    top: -87px;
+    left: -92px;
+    width: 136px;
+    height: 10px;
+    background-color: #ED4437;
+    z-index: 1;
+}
+
+.underMark {
+    position: relative;
+    top: -49px;
+    left: -72px;
+    width: 110px;
+    height: 12px;
+    background-color: #ED4437;
+    z-index: 1;
+}
+
+/* 첫번째 contents */
+
+.firstContents {
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    top: 50px;
+    right: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.fCImg {
+    width: 300px;
+    height: 200px;
+    box-shadow: 30px -30px 10px rgba(0, 0, 0, 0.7);
+}
+
+.fCMent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.fCMent > p:nth-child(2) {
+    margin-top: 20px;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+}
+
+.fCMent > p:nth-child(3) {
+    width: 390px;
+    margin-top: 50px;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.fCMent > button {
+    margin-top: 50px;
+    border: none;
+    background:none;
+    color: white;
+    width: 130px;
+    height: 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.fCMent > button:hover {
+    transform: scale(1.05);
+    transition: .3s;
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+/* 두번째 contents */
+
+.secondContents {
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    top: 580px;
+    left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.sCImg {
+    width: 300px;
+    height: 200px;
+    box-shadow: -40px 30px 10px rgba(0, 0, 0, 0.6);
+}
+
+.sCMent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.sCMent > p:nth-child(2) {
+    margin-top: 20px;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.sCMent > p:nth-child(3) {
+    width: 355px;
+    margin-top: 50px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.sCMent > button {
+    margin-top: 50px;
+    border: none;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.9);
+    width: 130px;
+    height: 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.sCMent > button:hover {
+    transform: scale(1.05);
+    transition: .3s;
+    color: orangered;
+    background-color: white;
+    border: 2px solid #bbb;
+}
+
+/* 세번째 contents */
+
+.thirdContents {
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    top: 1280px;
+    right: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    color: white;
+}
+
+.tCImg {
+    width: 300px;
+    height: 150px;
+    box-shadow: 30px 30px 10px rgba(0, 0, 0, 0.7);
+}
+
+.tCImg > img {
+    width: 100%;
+    height: 100%;
+}
+
+.tCMent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+.tCMent > p:nth-child(2) {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.tCMent > p:nth-child(3) {
+    width: 355px;
+    margin-top: 50px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.tCMent > button {
+    margin-top: 50px;
+    border: none;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.tCMent > button:hover {
+    transform: scale(1.05);
+    transition: .3s;
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+/* 네번째 contents */
+
+.fourthContents {
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    top: 1950px;
+    left: 60px;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.fourCImg {
+    width: 350px;
+    height: 200px;
+    box-shadow:  -30px -30px 10px  rgba(0, 0, 0, 0.7);
+}
+
+.fourCImg > img {
+    width: 100%;
+    height: 100%;
+}
+
+.fourCMent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.fourCMent > p:nth-child(2) {
+    margin-top: 20px;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.fourCMent > p:nth-child(3) {
+    width: 380px;
+    margin-top: 50px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.fourCMent > button {
+    margin-top: 50px;
+    border: none;
+    background-color: black;
+    color: white;
+    width: 130px;
+    height: 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.fourCMent > button:hover {
+    transform: scale(1.05);
+    transition: .3s;
+    color: orangered;
+    background-color: white;
+    border: 2px solid #bbb;
+}
+
+/* 다섯번째 contents */
+
+.fiveContents {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    top: 2700px;
+    left: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.fiveCImg {
+    width: 700px;
+    height: 300px;
+    box-shadow:  0 -30px 15px  rgba(0, 0, 0, 0.7);
+}
+
+.fiveCImg > img {
+    width: 100%;
+    height: 100%;
+}
+
+.fiveCMent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.fiveCMent > p:nth-child(2) {
+    margin-top: 20px;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.fiveCMent > p:nth-child(3), p:nth-child(4) {
+    width: 380px;
+    margin-top: 50px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.fiveCMent > p:nth-child(4) {
+    margin-top: 10px;
+    width: 460px;
+}
+
+
+.fiveCMent > button {
+    margin-top: 50px;
+    border: none;
+    background-color: black;
+    color: white;
+    width: 130px;
+    height: 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.fiveCMent > button:hover {
+    transform: scale(1.05);
+    transition: .3s;
+    color: orangered;
+    background-color: white;
+    border: 2px solid #bbb;
+}
+/* 
+footer
+footer {
+    width: 100%;
+    height: 165px;
+    background-color: black;
+    clear: both;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+첫 번째 라인
+.fline {
+    display: flex;
+}
+
+.siteName {
+    font-family: 'Dongle', sans-serif;
+    font-size: 45px;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-right: 900px;
+}
+
+.siteName > p {
+    width: 200px;
+}
+
+.list > ul {
+    display: flex;
+    font-size: 13px;
+    margin-top: 35px;
+}
+
+.list > ul > li {
+    width: 80px;
+    cursor: pointer;
+}
+
+.list > ul > li:hover {
+    color: orangered;
+}
+
+.list > ul > li:nth-child(3) {
+    width: 130px;
+}
+
+두 번째 라인
+.sline {
+    display: flex;
+}
+
+.siteInfo {
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 900px;
+}
+
+.siteInfo > ul {
+    font-size: 13px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.siteIcon {
+    margin-top: 20px;
+}
+
+.siteIcon > ul {
+    display: flex;
+    font-size: 35px;
+}
+
+.siteIcon > ul > li {
+    margin: 20px;
+    cursor: pointer;
+}
+
+.siteIcon > ul > li:hover {
+    transform: scale(1.2);
+    transition: .8s;
+}
+
+.siteIcon > ul > li:nth-child(1):hover {
+    color: #38529A;
+}
+
+.siteIcon > ul > li:nth-child(2):hover {
+    background: linear-gradient(to bottom, #833AB4, #FD1D1D, #FCA642);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.siteIcon > ul > li:nth-child(3):hover {
+    color: #1C9CEB;
+}
+
+.siteIcon > ul > li:nth-child(4):hover {
+    color: #F70000;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

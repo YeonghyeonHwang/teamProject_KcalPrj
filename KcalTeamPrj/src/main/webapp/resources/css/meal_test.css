@@ -1,0 +1,176 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #fff;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {list-style-type: none;}
+
+/* #content {
+	
+} */
+
+.dayBox {
+	width: 90%;
+	background-color: #fff;
+	border: 3px solid #E27451;
+	border-radius: 20px;
+	margin: 0 auto 40px;
+	padding: 20px;
+}
+.dayTop {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0 50px 20px; 
+}
+.mealDate {
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+.todayKcal {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #e6502b;
+}
+.mealcards {
+	white-space: nowrap;
+	overflow-x: auto;
+	padding-bottom: 15px;
+}
+.mealcards::-webkit-scrollbar {
+    height: 5px;
+}
+.mealcards::-webkit-scrollbar-thumb {
+	background-color: #ec7d62;
+    border-radius: 2.5px;
+}
+.mealcards::-webkit-scrollbar-track {
+    background-color: #ccc;
+    border-radius: 2.5px;
+}
+.mealcard {
+	display: inline-block;
+	margin: 0 10px;
+	padding: 15px;
+	background-color: #f9e3d9;
+	border-radius: 20px;
+	position: relative;
+}
+.mealcard .deleteBtn {
+	cursor: pointer;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	color: #e6502b;
+}
+.mealcard .deleteBtn:hover {color: red;}
+.mealtime {
+	display: block;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: bold;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #E27451;
+}
+
+
+.totalKcal {
+	display: block;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: bold;
+	padding-top: 10px;
+	border-top: 2px solid #E27451;
+	color: #e6502b;
+}
+.menuList {
+	margin: 10px 0;
+	height: 150px;
+	overflow: auto;
+	min-width: 200px;
+}
+.menuList::-webkit-scrollbar {
+    width: 5px;
+}
+.menuList::-webkit-scrollbar-thumb {
+	background-color: #ec7d62;
+    border-radius: 2.5px;
+}
+.menuList::-webkit-scrollbar-track {
+    background-color: #ccc;
+    border-radius: 2.5px;
+}
+.menuList table td {
+	padding: 7px;
+}
+.menuList tr td:nth-child(1) {
+	max-width: 250px;
+	white-space: normal;
+}
+.menuList tr td:nth-child(2) {text-align: center;}
+.menuList tr td:nth-child(3) {text-align: center;}
+
+.mealNone {
+	padding: 200px 0;
+	text-align: center;
+}
+
+#mealController {
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 10px;
+	margin: 0 auto;
+}
+
+#searchDate {
+	display: flex;
+	gap: 5px;
+}
+.datepicker {
+	width: 110px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 1rem;
+}
+#searchDateBtn {
+	height: 30px;
+	border-radius: 10px;
+	border: none;
+	background-color: #ccc;
+	padding: 0 10px;
+	font-size:0.91rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+#kcalCalc {
+	height: 30px;
+	border-radius: 10px;
+	border: none;
+	background-color: #ccc;
+	padding: 0 10px;
+	font-size:0.91rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+

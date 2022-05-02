@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  
+<mapper namespace="tip">
+	<select id="selectTipCList" parameterType="tvo" resultType="tvo">
+		select tnum, category, title, contents, DATE_FORMAT(createdate, "%Y-%m-%d") as createdate, ownerid, ownername, view_cnt
+		from tips
+		where category='column'
+		order by tnum desc
+		limit #{start}, #{count}
+	</select>
+	
+	<select id="selectTipWList" parameterType="tvo" resultType="tvo">
+		select tnum, category, title, contents, DATE_FORMAT(createdate, "%Y-%m-%d") as createdate, ownerid, ownername, view_cnt
+		from tips
+		where category='workout'
+		order by tnum desc
+		limit #{start}, #{count}
+	</select>
+	
+	<select id="selectCCount" parameterType="tvo" resultType="int">
+		select count(*)
+		from tips
+		where category='column'
+		
+	</select>
+	
+	<select id="selectWCount" parameterType="tvo" resultType="int">
+		select count(*)
+		from tips
+		where category='workout'
+	</select>
+	
+	<select id="selectTip" parameterType="tvo" resultType="tvo">
+		select tnum, category, title, contents, createdate, ownerid, ownername, view_cnt
+		from tips
+		where tnum=#{tnum}
+	</select>
+
+	<insert id="insertTip" parameterType="tvo">
+		insert into tips(category, title, contents, ownerid, ownername) 
+		values(#{category}, #{title}, #{contents}, #{ownerid}, #{ownername})
+	</insert>
+	
+	<update id="updateTip" parameterType="tvo">
+		update tips set title=#{title}, contents=#{contents}, view_cnt=view_cnt+1
+		where tnum=#{tnum}
+	</update>
+	
+	<update id="updateCnt" parameterType="tvo">
+		update tips set view_cnt=view_cnt+1
+		where tnum=#{tnum}
+	</update>
+	
+	<delete id="deleteTip" parameterType="tvo">
+		delete from tips
+		where tnum=#{tnum}
+	</delete>
+</mapper>

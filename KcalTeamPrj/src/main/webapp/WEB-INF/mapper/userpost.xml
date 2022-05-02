@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="userpost">
+	<select id="selectPost" parameterType="userpostVO" resultType="map">
+		select *
+		from userpost
+		where unum=#{unum}
+	    order by pnum desc
+	    limit #{start}, #{count}
+	</select>
+	<insert id="insertPost" parameterType="userpostVO">
+	<selectKey resultType="int" keyProperty="pnum" order="AFTER">
+
+SELECT LAST_INSERT_ID()
+
+      </selectKey>
+
+	    insert into 
+	    userpost(unum,createdate,title,content,isopen)
+	    values(#{unum},curdate(),#{title},#{content},#{isopen})
+	
+	
+	</insert>
+	
+	<insert id="insertPostfile" parameterType="postfileVO">
+	
+	      insert into
+	      postfile(localname, servername, pnum)
+	      values(#{localname},#{servername},#{pnum})
+	      
+	</insert>
+	
+	<select id="selectPostfileList" parameterType="postfileVO" resultType="postfileVO">
+	     select *
+	     from postfile
+	     where pnum=#{pnum}
+	     
+	</select>
+		<select id="selectPostfileThumbnail" parameterType="postfileVO" resultType="postfileVO">
+	     select *
+	     from postfile
+	     where pnum=#{pnum}
+	     order by pfnum limit 1
+	     
+	</select>
+	
+	<select id="userpostView" parameterType="userpostVO" resultType="userpostVO">
+	     select *
+	     from userpost
+	     where pnum=#{pnum}
+	</select>
+	
+	<update id="updateViewCnt" parameterType="userpostVO">
+	      update userpost set
+	      view_cnt=view_cnt+1
+	     where pnum=#{pnum}
+	
+	</update>
+	
+	<select id="selectPostCnt" parameterType="userpostVO" resultType="int">
+	     select count(*)
+	     from userpost
+	     where isdelete='N' and unum=#{unum} 
+	
+	</select>
+	  <delete id="deletePost" parameterType="userpostVO">
+         delete from userpost
+         where pnum=#{pnum}
+     </delete>
+     <delete id="deletePostFile" parameterType="postfileVO">
+         delete from postfile
+         where pnum=#{pnum}     
+      
+     </delete>
+     <update id="updatePost" parameterType="userpostVO">
+         update userpost set
+         title=#{title},
+	     content=#{content},
+	     isopen=#{isopen}
+	     where pnum=#{pnum}
+     </update>
+     <update id="updateRec" parameterType="userpostVO">
+         update userpost set
+         recommend=recommend+1
+	     where pnum=#{pnum}
+     </update>
+
+</mapper>

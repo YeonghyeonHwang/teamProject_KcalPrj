@@ -1,0 +1,535 @@
+@charset "UTF-8";
+
+.adNLogin {
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.ad {
+    flex: 1.5;
+    margin-right: 10px;
+}
+
+.ad > img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 로그인 전 */
+.adNLogin .login {
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid #ff681f;
+}
+
+.adNLogin .login:hover {
+    background-color: #fa7e40;
+    transition: 1s;
+}
+
+.adNLogin .login:hover > p {
+    color: white;
+    transition: .5s;
+}
+
+.adNLogin .login:hover > button {
+    border: 3px solid white;
+    color: white;
+}
+
+.adNLogin .login:hover > ul > li {
+    color: white;
+}
+
+.adNLogin .login > p {
+    color: dimgray;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.adNLogin .login > button {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    background: none;
+    color: dimgray;
+    cursor: pointer;
+    border: 2px solid #ff681f;
+}
+
+.adNLogin .login > button:hover {
+    transform: scale(1.07);
+    transition: 1s;
+    background-color: white;
+    color: tomato;
+}
+/* 로그인 버튼 누른 후 */
+.loginSubmit {
+    flex: 0.7;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid #ff681f;
+}
+
+.loginSiteName {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 40px;
+    margin-left: 10px;
+    color: #ff681f;
+    margin-top: 5px;
+}
+
+#loginPass {
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#loginPass > div > input {
+    width: 170px;
+    height: 25px;
+    color: dimgray;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#loginPass > div > label {
+    color: dimgray;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.idWrite {
+    margin-bottom: 10px;
+}
+
+.idWrite > label {
+    margin-right: 45px;
+}
+
+.pwWrite {
+    margin-bottom: 10px;
+}
+
+.pwWrite > label {
+    margin-right: 31px;
+}
+
+.logBtnBox {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+.logBtn {
+    width: 70px;
+    height: 30px;
+    color: lightslategray;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    background-color: #eee;
+    margin-right: 57px;
+    cursor: pointer;
+}
+
+.logBtn:hover {
+    background-color: #ff8d64;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+input:focus {
+    outline: 2px solid #ff8d64;
+    transition: .5s;
+}
+
+.supportBox {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30px;
+    color: dimgray;
+    font-size: 13px;
+    font-weight: bold;
+}
+.supportBox > p > i {
+    color: black;
+    margin-right: 3px;
+}
+.supportBox > p {
+    cursor: pointer;
+    color: dimgray;
+}
+.supportBox > p:hover {
+    transform: scale(1.07);
+    color: orangered;
+    transition: .5s;
+}
+.supportBox > p:hover > i {color: orangered}
+
+/* 로그인 후 */
+.loginAfter {
+    flex: 0.7;
+    border-radius: 5px;
+    border: 2px solid #ff8344;
+}
+
+.loginAfter:hover {
+    transition: 1s;
+    background-color: #fa7e40;
+    color: white;
+}
+
+.loginAfter:hover > .logout > p:nth-child(1) {
+    color: white;
+}
+
+.loginAfter:hover > .logout > p:nth-child(2) {
+    color: white;
+}
+
+.loginAfter:hover > .profileLine > .profileBtns > button {
+    color:white;
+    border: 2px solid white;
+}
+
+.loginAfter:hover > .profileLine > .profileImage > img {
+	background-color: white;
+	
+}
+
+.loginAfter .logout {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.loginAfter .logout > p:nth-child(1) {
+    margin-top: 15px;
+    margin-left: 15px;
+    color: dimgray;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.loginAfter .logout > p:nth-child(2) {
+    width: 70px;
+    height: 26px;
+    margin-top: 5px;
+    margin-right: 5px;
+    padding-top: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    color: dimgray;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.loginAfter .logout > p:nth-child(2):hover {
+    transition: .5s;
+    background-color: white;
+    color: tomato;
+    border-radius: 5px;
+}
+
+.profileLine {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    height: 140px;
+    padding: 0 30px;
+}
+
+.profileImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.profileImage > img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.profileBtns {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.profileBtns > button {
+    width: 140px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: dimgray;
+    background: none;
+    border: 2px solid #ff8344;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.loginAfter:hover > .profileLine > .profileBtns > button:hover {
+    transform: scale(1.07);
+    transition: 1s;
+    background-color: white;
+    color: tomato;
+}
+
+/* 여기까지 로그인 */
+
+.peopleBox {
+    width: 80%;
+    margin: 0 auto;
+    height: 70px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.pTitle > p {
+    font-size: 27px;
+    font-weight: bold;
+    color: #fa7e40;
+    margin-bottom: 10px;
+}
+
+.peopleList {
+    width: 80%;
+    margin: 0 auto;
+    height: 220px;
+}
+
+.peopleList > ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.peopleList > ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid rgb(248, 184, 161);
+    cursor: pointer;
+}
+
+.peopleList > ul > li:hover {
+    transform: scale(1.05);
+    background-color: #fa7e40;
+    transition: 1s;
+}
+
+.peopleList > ul > li:hover > p {
+    color: white;
+}
+
+.peopleList > ul > li:hover > ul {
+    color: white;
+}
+
+.rprofileImg {
+	width: 70px;
+	height: 70px;
+	overflow:hidden;
+	border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.rprofileImg img {
+	width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.peopleList > ul > li > p {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: dimgray;
+}
+
+.peopleList > ul > li > ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 12px;
+    font-weight: bold;
+    color: dimgray;
+}
+
+.bbsHotBox {
+    width: 80%;
+    margin: 0 auto;
+    height: 70px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.bTitle > p {
+    font-size: 27px;
+    font-weight: bold;
+    color: #fa7e40;
+    margin-bottom: 10px;
+}
+.bbsBox {
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 150px;
+	
+	display: flex;
+	flex-wrap: wrap;
+}
+.bbsBox > div {
+	padding: 0 20px;
+	display: inline-block;
+	width: 50%;
+	margin-bottom: 80px;
+	
+}
+.titleCon {
+	padding: 15px;
+	background-color: rgb(255, 215, 194);
+	
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px 10px 0 0;
+}
+.cateTitle {
+	font-size: 1.3rem;
+    font-weight: bold;
+    color: #586570;
+    width: 100%;
+    padding-left: 20px;
+}
+.more {
+	color: #586570;
+	font-size: 0.9rem;
+	display: inline-block;
+	font-weight: bold;
+	width: 80px;
+	display: flex;
+	align-items: center;
+}
+.more:hover {
+	color: #fa6f2c;
+	cursor: pointer;
+}
+
+
+.bbsBox ul {
+	padding: 0 10px;
+	border: 2px solid rgb(255, 215, 194);
+	border-top: none;
+	border-radius: 0 0 10px 10px;
+}
+.bbsBox ul li {
+	padding: 12px 10px;
+	border-bottom: 1px solid #ccc;
+	white-space: nowrap;
+ 	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #464646;
+}
+.bbsBox ul li:last-child {
+	border-bottom: none;
+}
+.bbsBox ul li:hover {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+
+/* .bbsBox {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 150px;
+}
+
+.bbsBox > ul {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin-top: 30px;
+}
+
+.bbsBox > ul > li {
+    width: 550px;
+    height: 225px;
+}
+
+.bOne, .bThree {
+    margin-right: 111px;
+}
+
+.bOne, .bTwo {
+    margin-bottom: 111px;
+}
+
+.bbsBox > ul > li > p {
+    font-size: 17px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    color: slategray;
+    width: 100%;
+    border-bottom: 3px solid rgb(255, 215, 194);
+}
+
+.bbsBox > ul > li > ul {
+    margin-top: 20px;
+    list-style-type: disc;
+}
+
+.bbsBox > ul > li > ul > li {
+    line-height: 2;
+    width: 90%;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: slategray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    cursor: pointer;
+}
+
+.bbsBox > ul > li > ul > li:hover {
+    color: #fa7e40;
+} */

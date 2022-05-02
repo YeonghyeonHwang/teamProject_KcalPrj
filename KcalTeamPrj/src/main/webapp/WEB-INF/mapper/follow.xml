@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="follow">
+	
+	<!-- <select id="selectFollow" parameterType="followVO" resultType="java.lang.Integer">
+		select count(follower) 
+		from follow
+		where followee=#{followee}
+		
+	</select>
+	<select id="selectFollow" parameterType="followVO" resultType="followVO">
+		select follower_n, followee_n, 
+		from follow
+		where followee=#{followee}
+		
+	</select> -->
+	<select id="countFollow" parameterType="followVO" resultType="map">
+		select count(case when followee_n=#{followee_n} THEN 1 END) as followerCnt ,count(case when follower_n=#{follower_n} THEN 1 END) as followeeCnt 
+		from follow;
+		
+	</select>
+	
+	<select id="followerList" parameterType="followVO" resultType="followVO">
+	    select * from follow where followee_n=#{followee_n}
+	
+	</select>
+	<select id="followeeList" parameterType="followVO" resultType="followVO">
+	    select * from follow where follower_n=#{follower_n}
+	
+	</select>
+	
+	<update id="updateErImg" parameterType="followVO">
+	     update follow set
+	     erimg_localname=#{erimg_localname},
+	     erimg_servername=#{erimg_servername}
+	     where follower_n=#{follower_n}
+	</update>
+	<update id="updateEeImg" parameterType="followVO">
+	   update follow set
+	     eeimg_localname=#{eeimg_localname},
+	     eeimg_servername=#{eeimg_servername}
+	     where followee_n=#{followee_n}
+	</update>
+	<delete id="deleteFollow" parameterType="followVO">
+	    delete from follow
+	    where follower_n=#{follower_n} and followee_n=#{followee_n}
+	   
+	
+	</delete>
+	<update id="updateFollow" parameterType="followVO">
+	  
+	    insert into
+	      follow(follower, followee, follower_n, followee_n, eeimg_localname, eeimg_servername, erimg_localname, erimg_servername)
+	      values(#{follower}, #{followee}, #{follower_n}, #{followee_n},#{eeimg_localname},#{eeimg_servername}, #{erimg_localname},#{erimg_servername}  )
+	      
+	</update>
+	
+	
+</mapper>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="meal">
+ 	<select id="selectMeal" parameterType="mealVO" resultType="mealVO">
+ 		SELECT c.mealnum, c.unum, c.date, TIME_FORMAT(c.time, '%H:%i') as time, i.menu, i.intake, i.kcal
+		FROM mealcard c
+		LEFT JOIN mealinfo i
+		ON c.mealnum = i.mealnum
+		WHERE unum = #{unum}
+		AND date BETWEEN #{startDate} AND #{endDate}
+		ORDER BY DATE DESC, time ASC;
+ 	</select>
+ 	
+ 	<insert id="insertMealcard" parameterType="mCardVO"
+	useGeneratedKeys="true" keyProperty="mealnum" >
+		insert into mealcard(unum, date, time, total_kcal)
+		values(#{unum}, #{date}, #{time}, #{totalKcal})
+	</insert>
+	
+	<insert id="insertMealinfo" parameterType="mInfoVO">
+		insert into mealinfo(mealnum, menu, intake, kcal)
+		values(#{mealnum}, #{menu}, #{intake}, #{kcal})
+	</insert>
+	
+	<delete id="deleteMealcard" parameterType="int">
+		delete from mealcard where mealnum = #{mealnum}
+	</delete>
+	
+ </mapper>

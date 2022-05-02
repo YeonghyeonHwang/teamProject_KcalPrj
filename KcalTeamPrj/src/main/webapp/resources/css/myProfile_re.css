@@ -1,0 +1,920 @@
+@charset "UTF-8";
+
+.container {
+	position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.profileContainer {
+    width: 100%;
+    hegith: 100%;
+    margin: 0 auto;
+    padding-bottom: 150px;
+    border: 1px solid #ccc;
+}
+
+.profileBox {
+    display: flex;
+    width: 80%;
+    height: 300px;
+    align-items: center;
+    margin: 0 auto;
+    border-bottom: 2px solid #ccc;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 150px;
+    margin-right: 80px;
+    border: 1px solid #ccc;
+}
+
+.photo > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+.info {
+    width: 700px;
+    height: 175px;
+}
+
+.info > ul > li:nth-child(1) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.info > ul > li:nth-child(1) > p {
+    font-size: 30px;
+    font-weight: bold;
+    color: dimgray;
+    margin-right: 30px;
+}
+
+.info > ul > li:nth-child(1) > div {
+    display: flex;
+    align-items: center;
+    margin-right: 13px;
+}
+
+.info > ul > li:nth-child(1) > div > i:nth-child(1) {
+    margin-right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.info > ul > li:nth-child(1) > div > i:nth-child(2) {
+	font-size: 26px;
+    cursor: pointer;
+}
+
+.info > ul > li:nth-child(1) > div > i:hover {
+    transform: scale(1.1);
+    color: orangered;
+    transition: .5s;
+}
+
+.info > ul > li:nth-child(2) {
+    display: flex;
+    font-size: 15px;
+    font-weight: bold;
+    color: dimgray;
+    margin-bottom: 30px;
+}
+
+.info > ul > li:nth-child(2) > p {
+    cursor: pointer;
+}
+
+.info > ul > li:nth-child(2) > p:hover {
+    color: orangered;
+    transition: .5s;
+}
+
+.info > ul > li:nth-child(2) > p:nth-child(1) {
+    margin-right: 39px;
+}
+
+.info > ul > li:nth-child(3) > p {
+    width: 70%;
+    height: 60px;
+    font-size: 13px;
+    font-weight: bold;
+    color: dimgray;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.tabBox {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tabBox > ul {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: dimgray;
+}
+
+.tabBox > ul > li > label {
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+}
+
+.main {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.postBtnBox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.postBtnBox > i {
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.postBtnBox > i:hover {
+    transition: .5s;
+    color: orangered;
+}
+
+.postBtnBox > i:nth-child(1) {
+    margin-right: 15px;
+}
+
+.postBtnBox > i:nth-child(2) {
+    margin-right: 40px;
+}
+
+.postListBox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.postCard {
+    width: 570px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+.postCard:hover {
+    transform: scale(1.05);
+    transition: 1s;
+    border: 2px solid orangered;
+}
+
+.postCard:hover > .postDate {
+    color: orangered;
+}
+
+.postCard:hover > .postContent > ul > li:nth-child(1) {
+    color: #ff8d64;
+}
+
+.postDate {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+.postContent {
+    display: flex;
+    align-items: center;
+}
+
+.postImg {
+    width: 170px;
+    height: 170px;
+    margin-left: 20px;
+    margin-right: 30px;
+    border-radius: 5px;
+}
+
+.postImg > img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 5px;
+}
+
+.postContent > ul {
+    width: 325px;
+    height: 170px;
+
+}
+
+.postContent > ul > li {
+    color: dimgray;
+}
+
+.postContent > ul > li:nth-child(1) {
+    font-size: 18px;
+    font-weight: bold;
+    height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    padding-top: 5px;
+    margin-bottom: 30px;
+}
+
+.postContent > ul > li:nth-child(2) {
+    font-size: 12px;
+    height: 50px;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-bottom: 50px;
+}
+
+.postContent > ul > li:nth-child(3) {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.postContent > ul > li:nth-child(3) > i {
+    color: orangered;
+    margin-right: 10px;
+}
+
+.postContent > ul > li:nth-child(3) > i:nth-child(1) {
+    margin-right: 20px;
+}
+
+.postContent > ul > li:nth-child(3) > i > span {
+    color: dimgray;
+}
+
+.pageBtnBox {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pageBtnBox > p {
+    width: 40px;
+    height: 40px;
+    font-size: 35px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    color: orangered;
+    cursor: pointer;
+}
+
+.pageBtnBox > p:hover {
+    transition: .5s;
+    border: 2px solid #ff8d64;
+    background-color: #ff8d64;
+    color: white;
+}
+
+.footer {
+    width: 100%;
+    height: 200px;
+    background-color: blue;
+}
+
+#section2 {
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#section3 {
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: dimgray;
+}
+
+#section4 {
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: dimgray;
+}
+
+/* 글쓰기================================================================================ */
+
+#writeDiv {
+    width: 100%;
+    height: 100%;
+}
+
+#writeDiv > ul {
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+#writeDiv > ul > li:nth-child(1) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#writeDiv > ul > li:nth-child(1) > p {
+    font-size: 25px;
+    font-weight: bold;
+    color: dimgray;
+}
+
+#writeDiv > ul > li:nth-child(2) {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#writeDiv > ul > li:nth-child(2) > label {
+    margin-right: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    color: dimgray;
+}
+
+#writeDiv > ul > li:nth-child(2) > input {
+    width: 700px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#writeDiv > ul > li:nth-child(2) > input:focus {
+    outline: 2px solid #ff8d64;
+    transition: .5s;
+}
+
+#writeDiv > ul > li:nth-child(3) {
+    position: relative;
+    height: 406px;
+    margin-bottom: 10px;
+}
+
+#writeDiv > ul > li:nth-child(3) > label {
+    margin-right: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    color: dimgray;
+    position: absolute;
+}
+
+#writeDiv > ul > li:nth-child(3) > textarea {
+    position: absolute;
+    left: 85px;
+    width: 700px;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+#writeDiv > ul > li:nth-child(3) > textarea:focus {
+    outline: 2px solid #ff8d64;
+    transition: .5s;
+}
+
+#writeDiv > ul > li:nth-child(4) {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 70px;
+}
+
+#writeDiv > ul > li:nth-child(4) > p {
+    font-size: 14px;
+    font-weight: bold;
+    color: dimgray;
+    margin-left: 84px;
+    margin-right: 40px;
+}
+
+#writeDiv > ul > li:nth-child(4) > div {
+    display: flex;
+    align-items: baseline;
+}
+
+#writeDiv > ul > li:nth-child(4) > div > label {
+    font-weight: bold;
+    color: dimgray;
+    font-size: 14px;
+}
+
+#writeDiv > ul > li:nth-child(4) > div > input {
+	margin-top: 3px;
+	margin-left: 5px;
+    margin-right: 20px;
+}
+
+#writeDiv > ul > li:nth-child(5) {
+    font-size: 17px;
+    font-weight: bold;
+    color: dimgray;
+    margin-bottom: 20px;
+}
+
+#writeDiv > ul > li:nth-child(6) {
+    display: flex;
+    margin-bottom: 80px;
+}
+
+#writeDiv > ul > li:nth-child(6) > div {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+#writeDiv > ul > li:nth-child(6) > div > input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+#writeDiv > ul > li:nth-child(6) > div > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    margin-left: 10px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#writeDiv > ul > li:nth-child(6) > div > label:hover {
+    transition: 1s;
+    background-color: #ff8d64;
+    border: 1px solid #ff8d64;
+}
+
+#writeDiv > ul > li:nth-child(6) > div > label:hover > span {
+    color: white;
+}
+
+#writeDiv > ul > li:nth-child(6) > div > label:hover > div {
+    border:none;
+}
+
+#writeDiv > ul > li:nth-child(6) > div > label > span {
+    position: absolute;
+    color: #ccc;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#writeDiv > ul > li:nth-child(7) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+#writeDiv > ul > li:nth-child(7) > div {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#writeDiv > ul > li:nth-child(7) > div > button {
+    width: 90px;
+    height: 46px;
+    font-size: 13px;
+    background-color: #eee;
+    color: lightslategray;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+#writeDiv > ul > li:nth-child(7) > div > button:hover {
+    background-color: #ff8d64;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+/* setting 모달창 ================================================================================ */
+
+.settingModalContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.settingBox {
+    position: absolute;
+    width: 480px;
+    height: 700px;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.settingBox > ul {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.settingBox > ul > span {
+    font-size: 37px;
+    position: absolute;
+    top: -2px;
+    right: 6px;
+    color: black;
+    cursor: pointer;
+}
+
+.settingBox > ul > span:hover {
+    color: orangered;
+}
+
+.settingBox > ul > li:nth-child(2) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    height: 62px;
+    font-size: 20px;
+    font-weight: bold;
+    color: dimgray;
+    border-bottom: 2px solid #ccc;
+}
+
+.settingBox > ul > li:nth-child(3) {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.settingBox > ul > li:nth-child(3) > div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.settingBox > ul > li:nth-child(3) > div > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+.settingBox > ul > li:nth-child(3) > button {
+    width: 110px;
+    height: 32px;
+    font-size: 13px;
+    background-color: #eee;
+    color: lightslategray;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.settingBox > ul > li:nth-child(3) > button:hover {
+    background-color: #ff8d64;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.settingBox > ul > li:nth-child(4) {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: dimgray;
+}
+
+.settingBox > ul > li:nth-child(4) > p {
+    margin-bottom: 7px;
+}
+
+.settingBox > ul > li:nth-child(4) > textarea {
+    width: 100%;
+    height: 75px;
+    resize: none;
+    border-radius: 5px;
+    padding-left: 5px;
+    border: 2px solid #ccc;
+}
+
+.settingBox > ul > li:nth-child(4) > textarea:focus {
+    outline: 2px solid #ff8d64;
+    transition: .5s;
+}
+
+.settingBox > ul > li:nth-child(5) {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: dimgray;
+    border-bottom: 2px solid #ccc;
+}
+
+.settingBox > ul > li:nth-child(5) > p {
+    margin-bottom: 7px;
+}
+
+.settingBox > ul > li:nth-child(6) {
+    display: flex;
+    margin-left: 55px;
+    font-size: 16px;
+    font-weight: bold;
+    color: dimgray;
+    margin-top: 30px;
+}
+
+.settingBox > ul > li:nth-child(6) > p {
+    margin-right: 112px;
+}
+
+.settingBox > ul > li > input {
+	margin-right: 3px;
+	margin-top: 3px;
+	margin-left: 5px;
+}
+
+.settingBox > ul > li:nth-child(6) > label {
+    margin-right: 40px;
+}
+
+.settingBox > ul > li:nth-child(7) {
+    display: flex;
+    margin-left: 55px;
+    font-size: 16px;
+    font-weight: bold;
+    color: dimgray;
+    margin-top: 15px;
+}
+
+.settingBox > ul > li:nth-child(7) > p {
+    margin-right: 96px;
+}
+
+.settingBox > ul > li:nth-child(7) > label {
+    margin-right: 40px;
+}
+
+.settingBox > ul > li:nth-child(8) {
+    display: flex;
+    margin-left: 55px;
+    font-size: 16px;
+    font-weight: bold;
+    color: dimgray;
+    margin-top: 15px;
+}
+
+.settingBox > ul > li:nth-child(8) > p {
+    margin-right: 80px;
+}
+
+.settingBox > ul > li:nth-child(8) > label {
+    margin-right: 40px;
+}
+
+.settingBox > ul > li:nth-child(9) {
+    display: flex;
+    margin-left: 55px;
+    font-size: 16px;
+    font-weight: bold;
+    color: dimgray;
+    margin-top: 15px;
+}
+
+.settingBox > ul > li:nth-child(9) > p {
+    margin-right: 80px;
+}
+
+.settingBox > ul > li:nth-child(9) > label {
+    margin-right: 40px;
+}
+
+.settingBox > ul > li:nth-child(10) {
+    margin-top: 30px;
+    border-top: 2px solid #ccc;
+}
+
+.settingBox > ul > li:nth-child(10) > div {
+    display: flex;
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.settingBox > ul > li:nth-child(10) > div > button {
+    width: 80px;
+    height: 35px;
+    font-size: 13px;
+    background-color: #eee;
+    color: lightslategray;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.settingBox > ul > li:nth-child(10) > div > button:hover {
+    background-color: #ff8d64;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+/* follower / follow 모달창 ================================================================================ */
+
+.followContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.followBox {
+    position: absolute;
+    width: 400px;
+    height: 434px;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.followTitle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: dimgray;
+    border-bottom: 2px solid #ccc;
+}
+
+.followTitle > span {
+    font-size: 30px;
+    position: absolute;
+    top: 2px;
+    right: 7px;
+    color: black;
+    cursor: pointer;
+}
+
+.followTitle > span:hover {
+    color: orangered;
+}
+
+.followList {
+    width: 100%;
+    height: 100%;
+}
+
+.followList > ul {
+    overflow-y: scroll;
+    height: 392px;
+}
+
+.followList > ul > li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 90%;
+    margin: 0 auto;
+    color: dimgray;
+    height: 53px;
+    border-bottom: 1px solid #ccc;
+}
+
+.followList > ul > li > div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.followList > ul > li > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 50%;
+}
+
+.followList > ul > li > p {
+    width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    margin-right: 10px;
+	cursor: pointer;
+}
+
+.followList > ul > li > p:hover {
+	transition: .3s;
+	color:orangered;
+}
+
+.followList > ul > li > button {
+    width: 76px;
+    height: 30px;
+    font-size: 11px;
+    background-color: #eee;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.followList > ul > li > button:hover {
+    background-color: #ff8d64;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+
+
+
+
+
+
+
+
+
+
+

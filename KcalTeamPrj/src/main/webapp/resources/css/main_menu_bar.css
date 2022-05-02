@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+#top {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    cursor: pointer;
+    z-index: 500;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 69, 0, 0.8);
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+}
+
+#top:hover {
+    background-color: red;
+    transform: scale(1.15);
+    transition: .7s;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28px;
+    font-weight: bold;
+    color: slategray;
+    background-color: rgb(255, 251, 251);
+}
+
+/* 로고 */
+.logo {
+    display: flex;
+    width: 260px;
+    height: 100%;
+    margin-left: 25px;
+    cursor: pointer;
+    align-items: center;
+    font-family: 'Dongle', sans-serif;
+}
+
+.logo > ul {
+    width: 80px;
+    margin-left: 10px;
+    color: orangered;
+}
+
+.logo > ul > li {
+    width: 170px;
+    font-size: 50px;
+}
+
+.logo > img {
+    width: 85px;
+}
+
+/* 가운데 메뉴 */
+.menuCenter > ul {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.menuCenter > ul > li {
+	cursor: pointer;	
+}
+
+.menuCenter > ul > li:hover {
+    color:orangered;
+    transform: scale(1.1);
+    transition: .7s;
+}
+
+.active {
+	color:orangered;
+}
+
+/* 오른쪽 메뉴 */
+
+.menuRight {
+    margin-right: 50px;
+}
+
+.menuRight > ul {
+    display: flex;
+    align-items: flex-end;
+    width: 250px;
+    justify-content: right;
+    font-size: 13px;
+}
+
+.menuRight > ul > li {
+	cursor: pointer;
+}
+
+.menuRight > ul:first-child {
+    margin-bottom: 10px;
+}
+
+.menuRight > ul:first-child > li:first-child {
+    margin-right: 10px;
+}
+
+.menuRight > ul:last-child > li:first-child {
+    margin-right: 20px;
+}
+
+.menuRight > ul:last-child > li:hover {
+    color: orangered;
+    transform: scale(1.1);
+    transition: .7s;
+}
+
+.rightBtn {
+    background-color: oldlace;
+    border: none;
+    font-size: 13px;
+    border-radius: 15px;
+    height: 30px;
+    font-weight: bold;
+    color: slategray;
+    cursor: pointer;
+}
+
+.rightBtn:hover {
+    color: orangered;
+    transform: scale(1.1);
+    transition: .7s;
+}
+
+.admin {
+    width: 105px;
+}
+
+.community {
+    width: 80px;
+}
+
+
+
+.user {
+	margin-left: 10px;
+	border: 2px solid #ccc;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	cursor: pointer;
+	overflow: hidden;
+	
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+#user-logout {
+	color: #ccc;
+}
+#user-login {
+	color: orangered;
+	border: 2px solid orangered;
+}
+
+.userBox {
+	background-color: #fff;
+	border: 2px solid #ccc;
+	width: 200px;
+	position: absolute;
+	right: 30px;
+	top: 90px;
+	text-align: center;
+	padding: 20px;
+	border-radius: 10px;
+	z-index: 5;
+}
+.ubLogin {
+	display: none;
+}
+.ubLogin.clicked {
+	display: inline-block;
+}
+.ubLogin #ubLoginClose {
+	position: absolute;
+	top: 10px;
+	right: 13px;
+	color: #bbb;
+	cursor: pointer;
+	font-size: 1.2rem;
+}
+
+.ubLogin #userImg {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.ubLogin #userImg img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.ubLogin #ubNickname {
+	font-size: 1rem;
+}
+.ubLogin #letterBox {
+	color: #bbb;
+	cursor: pointer;
+	padding-left: 5px;
+	font-size: 1.2rem;
+}
+.ubLogin #letterBox i {
+	font-size: 3rem;
+}
+.ubLogin #letterBox:hover {
+	color: orangered;
+}
+
+.ubBtn {
+	width: 100%;
+	background-color: #eee;
+	margin-top: 10px;
+	padding: 10px 0;
+	cursor: pointer;
+	font-size: 0.9rem;
+}

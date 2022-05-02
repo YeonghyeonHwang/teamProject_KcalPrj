@@ -1,0 +1,639 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #fff;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {list-style-type: none;}
+
+header {
+	width: 76.3%;
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
+	position: relative;
+	border-bottom: 2px solid #ff652b;
+	margin: 0 auto;
+}
+header #logo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+header #logo img {
+	width: 85px;
+}
+header #logo span {
+	display: inline-block;
+    margin-left: 10px;
+    color: orangered;
+    width: 170px;
+    min-width: 170px;
+    font-size: 50px;
+    font-family: 'Dongle', sans-serif;
+}
+header #header_r {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#communityHome,
+#myProfile {
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 10px 13px;
+	border-radius: 15px;
+	background-color: #eee;
+	color: lightslategray;
+}
+
+#communityHome:hover {
+  	background-color: #ff8d64;
+    color: white;
+    transition: 0.25s;
+}
+
+#myProfile:hover {
+	background-color: #ff8d64;
+    color: white;
+    transition: 0.25s;
+}
+
+#communityHome {
+	margin-right: 15px;
+}
+
+
+
+#mypageWrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 20px;
+}
+
+#mypageWrap .tabs {
+    border-right: 2px solid #ff652b;
+    /* padding: 30px 0; */
+    width: 200px;
+    min-width: 200px;
+    box-sizing: content-box;
+}
+
+#mypageWrap .tabs li:nth-child(4) {
+	margin-bottom: 30px;
+}
+#mypageWrap .tabs .tabTitle {
+    padding-top: 2px;
+    padding-bottom: 6px;
+    padding-left: 20%;
+    background-color: #ff652b;
+    /* font-weight: bold; */
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+#mypageWrap .tabs .tab {
+    padding: 10px 0;
+    padding-left: 20%;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #444444;
+}
+#mypageWrap .tabs .tab.selected {
+    font-weight: bold;
+    color: #e6502b;
+}
+
+#mypageWrap .tabs .tab span {
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+	margin-right: 5px;
+}
+
+
+#mypageWrap .contents {
+    flex-grow: 1;
+    padding: 30px 60px;
+}
+
+.contents .content {
+    display: none;
+}
+.contents .content.selected {
+    display: block;
+}
+
+.contents .subTitle {
+    display: block;
+    padding: 15px 0 10px 20px;
+    border-bottom: 2px solid #f2c9b5;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.contents .memberCon {
+	height: 540px;
+}
+.contents .memberCon table {
+    padding: 30px 10px 30px 50px;
+    border-collapse: separate;
+    border-spacing: 5px 20px;
+}
+.contents .memberCon th {
+    width: 85px;
+    min-width: 45px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.memberCon input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 25px;
+}
+.emailCheckResult {
+	font-size: 0.8rem;
+}
+
+#memberInfo {
+	width: 100%;
+}
+.addr {margin-bottom: 5px;}
+.addr1 {
+    display: inline-block;
+    width: 60px;
+}
+.addr2 {width: 221px;}
+
+.findAddr {
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.modifyMember {
+    display: inline-block;
+    margin: 0 auto;
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: #f2c9b5;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+#modifyPw ul,
+#withdraw ul {
+    padding: 30px 10px 30px 50px;
+}
+
+#modifyPw ul li,
+#withdraw ul li {
+    margin-bottom: 20px;
+}
+#modifyPw ul li:last-child,
+#withdraw ul li:last-child {
+    margin-top: 60px;
+    text-align: center;
+}
+#modifyPw ul li span:first-child,
+#withdraw ul li span:first-child {
+    display: inline-block;
+    width: 130px;
+    font-weight: bold;
+}
+
+#modifyPw .modifyPw {
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #f2c9b5;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.wdNotice {
+    font-size: 0.8rem;
+    color: red;
+}
+.withdraw {
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #f2c9b5;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+/* 쪽지함 */
+#letter .letterTabs {
+	display: flex;
+	
+}
+
+#letter .letterTabs .ltab {
+	flex-grow: 1;
+	cursor: pointer;
+	text-align: center;
+	font-size: 1.2rem;
+	color: #515151;
+}
+#letter .letterTabs .ltab.selected {
+    font-weight: bold;
+    color: orangered;
+}
+
+.lcon {
+    display: none;
+}
+.lcon.selected {
+    display: block;
+}
+.letterDelete {
+	padding: 5px 10px;
+	border: none;
+    background-color: #ff652b;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold; 
+    margin: 20px;   
+    cursor: pointer;   
+}
+.lnickname:hover {
+	cursor: pointer;
+	font-weight: bold;
+	color: orangered;
+}
+#letter .lcon table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	margin-top: 20px;
+}
+#letter table tbody td:nth-child(1) {
+	width: 50px;
+	text-align: center;
+} 
+#letter table tbody td:nth-child(2) {
+	padding-left: 15px;
+}
+#letter table tbody td:nth-child(3) {
+	text-align: center;
+	width: 20%;
+}
+#letter table tbody td:nth-child(4) {
+	text-align: center;
+	width: 20%;
+	min-width: 83px;
+}
+#letter table th{
+	background-color: #f5d6c7;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+#letter table td {
+	border-bottom: 1px solid #ccc;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#letter .clickable {
+	cursor: pointer;
+}
+#letter .r_currPage,
+#letter .s_currPage {
+	font-weight: bold;
+	text-decoration: underline;
+	color: orangered;
+}
+#letter #rl_pages,
+#letter #sl_pages {
+	display: flex;
+	justify-content: space-between;
+	width: 250px;
+	margin: 0 auto;
+}
+
+.letterTitle:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+#letterModalBg {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	z-index: 5;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#letterModal {
+	width: 80%;
+	max-width: 500px;
+	height: 550px;
+	background-color: #fff;
+	border-radius: 20px;
+	position: absolute;
+	top: 30px;
+  	left: 50%;
+  	transform: translateX(-50%);
+  	padding: 60px 30px 20px; 
+}
+#letterModal li {
+	margin-bottom: 15px;
+}
+#letterModal li span {
+	display: inline-block;
+	width: 80px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+#letterModal #lmSnick {
+	width: fit-content;
+	font-weight: normal;
+	margin: 0;
+}
+#letterModal #letter-content {
+	overflow: auto;
+	margin: 0 auto;
+	padding: 15px;
+	resize: none;
+	width: 100%;
+}
+#letterCloseBtn {
+	cursor: pointer;
+	position: absolute;
+	top: 20px;
+	right:20px;
+	color: orangered;
+}
+#replyBtn {
+	padding: 5px 20px;
+	font-size: 1rem;
+	border: none;
+	border-radius: 10px;
+	border: 2px solid orangered;
+	color: orangered;
+	font-weight: bold;
+	background-color: #fff;
+	cursor: pointer;
+}
+#letterModal ul li:nth-child(5) {
+	text-align: center;
+}
+td[data-ischeck='Y'] {
+	color: #ccc;
+}
+
+#sendLetterBg {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	z-index: 5;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#sendLetterModal {
+	width: 80%;
+	max-width: 500px;
+	height: 500px;
+	background-color: #fff;
+	border-radius: 20px;
+	position: absolute;
+	top: 30px;
+  	left: 50%;
+  	transform: translateX(-50%);
+  	padding: 60px 30px 20px; 
+}
+#sendCloseBtn {
+	cursor: pointer;
+	position: absolute;
+	top: 20px;
+	right:20px;
+}
+#sendLetterModal li {
+	margin-bottom: 15px;
+}
+#sendLetterModal li span {
+	display: inline-block;
+	width: 80px;
+	font-weight: bold;
+}
+#sendLetterModal #reply-recipient {
+	border: none;
+	font-size: 1rem;
+}
+#sendLetterModal #reply-title {
+	padding: 5px 0 5px 15px;
+	width: 100%;
+}
+#sendLetterModal #reply-content {
+	overflow: auto;
+	margin: 0 auto;
+	padding: 15px;
+	resize: none;
+	width: 100%;
+}
+#replySubmit {
+	padding: 5px 20px;
+	font-size: 0.9rem;
+}
+#sendLetterModal ul li:nth-child(4) {
+	text-align: center;
+}
+
+#myPost {
+	min-height: 600px;
+}
+#myPost .myPostTabs {
+	display: flex;
+	width: 100%;
+}
+#myPost .myPostTabs .ptab {
+	flex-grow: 1;
+	cursor: pointer;
+	text-align: center;
+	padding: 10px 0;
+	color: #515151;
+	font-size: 1.1rem;
+}
+#myPost .myPostTabs .ptab.selected {
+    font-weight: bold;
+    color: orangered;
+}
+#myPost #postCon {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	margin-bottom: 20px;
+}
+#postCon thead {
+	background-color: #f5d6c7;
+}
+#postCon th {
+	padding: 10px 0;
+}
+#postCon td {
+	text-align: center;
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+#postCon tr td:nth-child(1) {
+	text-align: left;
+	padding-left: 20px;
+}
+#postCon tr td:nth-child(1):hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+#postCon tr th:nth-child(2) {
+	width: 140px;
+}
+#postCon tr th:nth-child(3),
+#postCon tr th:nth-child(4) {
+	width: 50px;
+}
+#bbsPageBox {
+	display: flex;
+	width: 250px;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+.mpPageNum,
+.mpPreBlock,
+.mpPrePage,
+.mpNextBlock,
+.mpNextPage {
+	cursor: pointer;
+	display: inline-block;
+}
+
+.replyCnt {
+	color: orangered;
+	font-weight: bold;
+	display: inline-block;
+	padding: 0 10px;
+}
+
+
+
+#askTitle {
+	display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+}	
+#myAsk {
+	min-height: 600px;
+}
+
+#askCon {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	margin-bottom: 20px;
+}
+#askCon thead {
+	background-color: #f5d6c7;
+}
+#askCon th {
+	padding: 10px 0;
+}
+#askCon td {
+	text-align: center;
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+#askCon tr td:nth-child(1) {
+	text-align: left;
+	padding-left: 35px;
+}
+#askCon tr td:nth-child(1):hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+#askCon tr td:nth-child(2) {
+	width: 150px;
+}
+#askPageBox {
+	display: flex;
+	width: 250px;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+.cqPageNum,
+.cqPreBlock,
+.cqPrePage,
+.cqNextBlock,
+.cqNextPage {
+	cursor: pointer;
+	display: inline-block;
+}
+
+.letterNone {
+	height: 350px;
+}
+
+
+
+
+/* 타블렛 */
+@media screen and (max-width:1023px) {
+
+
+
+}
+
+
+    /* 모바일 */
+@media screen and (max-width:767px) {
+
+#mypageWrap .contents {
+    padding: 25px 20px;
+}
+
+
+.contents .memberCon table {
+    padding: 30px 0px;
+}
+
+
+
+}

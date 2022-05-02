@@ -1,0 +1,256 @@
+@charset "UTF-8";
+html {
+	background-color:white;
+}
+
+.signUp {
+	background-color:white;
+}
+
+.signUpBox {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    border-top: 1px solid #ccc;
+}
+
+.plan_ment {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-10%, -50%);
+    text-align: center;
+    color: white;
+    line-height: 1.5;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+}
+
+.signUpTitle {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3% 0;
+    color: dimgray; 
+    font-size: 20px;
+    line-height: 1.2;
+    margin-top: 80px;
+}
+
+.signUpMent1 {
+    font-weight: bold;
+    font-size: 30px;   
+}
+
+.signUpMent1 > span {
+    color: orangered;
+}
+
+.signUpMent2 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.signUpContent {
+    width: 60%;
+    height: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.signUpContentTitle {
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ff8d64;  /* fallback for old browsers */
+}
+
+.signUpContentTitle > p {
+    font-size: 20px;
+    font-weight: bold;
+    color: dimgray;
+}
+
+.signUpInfo {
+    margin-top: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    color: dimgray;
+}
+
+.signUpInfoBox > ul > li > input {
+    width: 250px;
+    height: 30px;
+    color: dimgray;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signUpInfoBox > ul > li {
+    margin-bottom: 50px;
+}
+
+.signUpInfoBox > ul > li:nth-child(1) {
+    display: flex;
+    align-items: center;
+}
+
+.signUpInfoBox > ul > li:nth-child(4) {
+    display: flex;
+    align-items: center;
+}
+
+.signUpInfoBox > ul > li:nth-child(6) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.idLabel {
+    margin-right: 185px;
+}
+
+.pwLabel1 {
+    margin-right: 131px;
+}
+
+.pwLabel2 {
+    margin-right: 93px;
+}
+
+.nickLabel {
+    margin-right: 153px;
+}
+
+.emailLabel {
+    margin-right: 148px;
+}
+.emailKeyLabel {
+    margin-right: 148px;
+}
+
+.addr1Label {
+    margin-right: 170px;
+}
+
+.addr3Label {
+    margin-right: 131px;
+}
+
+#addr1 {
+    width: 100px;
+    margin-right: 20px;
+}
+
+#addr2 {
+    width: 300px;
+}
+
+#addr3 {
+    width: 526px;
+}
+
+.Btn {
+    margin-left: 20px;
+    width: 80px;
+    height: 34px;
+    color: lightslategray;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.Btn:hover {
+    background-color: #ff8d64;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+input:focus {
+    outline: 2px solid #ff8d64;
+    transition: .5s;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.signUpBtnBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+#signUpBtn {
+    font-size: 16px;
+    font-weight: bold;
+    color: #6e6e6e;
+    border: 2px solid orangered;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 30px;
+}
+#signUpBtn:hover {
+    background-color: #ff8d64;
+    color: white;
+    letter-spacing: 1px;
+    transform: scale(1);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.idCheckResult,
+#chkNotice,
+.nicknameCheckResult,
+.emailCheckResult {
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+#emailChk {
+	display: inline-block;
+	margin-left: 20px;
+    width: 120px;
+    height: 34px;
+    line-height: 34px;
+    color: lightslategray;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    background-color: #eee;
+    cursor: pointer;
+    text-align: center;
+}
+#emailChk2 {
+	display: inline-block;
+	margin: 0 20px;
+    width: 80px;
+    min-width: 80px;
+    height: 34px;
+    line-height: 34px;
+    color: lightslategray;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    background-color: #eee;
+    cursor: pointer;
+    text-align: center;
+}
